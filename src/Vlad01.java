@@ -4,9 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 
-public class Vlad extends BaseDriver {
+public class Vlad01 extends BaseDriver {
     @Test
-    public void faceBookCreateAccount() {
+    public void faceBookCreateAcc() {
         driver.get("https://www.facebook.com/");
 
         WebElement button1 = driver.findElement(By.cssSelector("a[id^='u_0_0_']"));
