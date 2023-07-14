@@ -4,19 +4,19 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 
-public class Elvira extends BaseDriver {
+public class Vlad01 extends BaseDriver {
     @Test
-    public void faceBookCreateAccount() {
+    public void faceBookCreateAcc() {
         driver.get("https://www.facebook.com/");
 
         WebElement button1 = driver.findElement(By.cssSelector("a[id^='u_0_0_']"));
         button1.click();
 
         WebElement name = driver.findElement(By.cssSelector("input[id^='u_'][name='firstname']"));
-        name.sendKeys("Elvira");
+        name.sendKeys("Vlad");
 
         WebElement lastName = driver.findElement(By.cssSelector("input[name='lastname']"));
-        lastName.sendKeys("Snow");
+        lastName.sendKeys("Mak");
 
         MyMethods.myWait(1);
 
@@ -26,7 +26,7 @@ public class Elvira extends BaseDriver {
         MyMethods.myWait(1);
 
         WebElement password = driver.findElement(By.cssSelector("input[autocomplete='new-password']"));
-        password.sendKeys("Cankut1234.");
+        password.sendKeys("Qwertyqaz");
 
         WebElement date = driver.findElement(By.cssSelector("select[aria-label='Month']>option[value='4']"));
         date.click();

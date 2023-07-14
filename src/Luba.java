@@ -6,11 +6,12 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
+import static java.sql.DriverManager.getDriver;
+
 public class Luba extends BaseDriver {
 
 @Test
     public void testEmail(){
-    getDriver();
 
     driver.get("https://www.facebook.com/");
     MyMethods.myWait(1);
