@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 
-public class Elvira_FacebookRegistration extends BaseDriver {
+public class Elvira_FacebookRegistration_Positive extends BaseDriver {
     @Test
     public void faceBookCreateAccount() {
         driver.get("https://www.facebook.com/");
