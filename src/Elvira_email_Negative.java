@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 
-public class Elvira_LastName_Positive extends BaseDriver {
+public class Elvira_email_Negative extends BaseDriver {
     @Test
     public void faceBookCreateAccount() {
         driver.get("https://www.facebook.com/");
@@ -14,18 +14,15 @@ public class Elvira_LastName_Positive extends BaseDriver {
         button1.click();
 
         WebElement name = driver.findElement(By.cssSelector("input[id^='u_'][name='firstname']"));
-        name.sendKeys("John");
+        name.sendKeys("Elvira");
 
         WebElement lastName = driver.findElement(By.cssSelector("input[name='lastname']"));
-        lastName.sendKeys("");
+        lastName.sendKeys("Snow");
 
         MyMethods.myWait(1);
 
         WebElement eMail = driver.findElement(By.cssSelector("input[name='reg_email__']"));
-        eMail.sendKeys("Johnsnow@gmail.com");
-
-        WebElement econfffff = driver.findElement(By.name("reg_email_confirmation__"));
-        econfffff.sendKeys("Johnsnow@gmail.com");
+        eMail.sendKeys(" ");
 
         MyMethods.myWait(1);
 
