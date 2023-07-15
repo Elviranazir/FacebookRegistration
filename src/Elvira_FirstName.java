@@ -1,10 +1,11 @@
 
-import org.junit.Test;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
 
 
-public class Elvira extends BaseDriver {
+public class Elvira_FirstName extends BaseDriver {
     @Test
     public void faceBookCreateAccount() {
         driver.get("https://www.facebook.com/");
@@ -13,7 +14,7 @@ public class Elvira extends BaseDriver {
         button1.click();
 
         WebElement name = driver.findElement(By.cssSelector("input[id^='u_'][name='firstname']"));
-        name.sendKeys("Elvira");
+        name.sendKeys("");
 
         WebElement lastName = driver.findElement(By.cssSelector("input[name='lastname']"));
         lastName.sendKeys("Snow");
@@ -21,12 +22,15 @@ public class Elvira extends BaseDriver {
         MyMethods.myWait(1);
 
         WebElement eMail = driver.findElement(By.cssSelector("input[name='reg_email__']"));
-        eMail.sendKeys(" ");
+        eMail.sendKeys("Johnsnow@gmail.com");
+
+        WebElement econfffff = driver.findElement(By.name("reg_email_confirmation__"));
+        econfffff.sendKeys("Johnsnow@gmail.com");
 
         MyMethods.myWait(1);
 
         WebElement password = driver.findElement(By.cssSelector("input[autocomplete='new-password']"));
-        password.sendKeys("Cankut1234.");
+        password.sendKeys("Elvira1234.");
 
         WebElement date = driver.findElement(By.cssSelector("select[aria-label='Month']>option[value='4']"));
         date.click();
