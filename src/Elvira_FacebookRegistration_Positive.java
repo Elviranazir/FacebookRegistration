@@ -1,10 +1,11 @@
 
-import org.junit.Test;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
 
 
-public class Elvira extends BaseDriver {
+public class Elvira_FacebookRegistration_Positive extends BaseDriver {
     @Test
     public void faceBookCreateAccount() {
         driver.get("https://www.facebook.com/");
@@ -26,7 +27,7 @@ public class Elvira extends BaseDriver {
         MyMethods.myWait(1);
 
         WebElement password = driver.findElement(By.cssSelector("input[autocomplete='new-password']"));
-        password.sendKeys("Cankut1234.");
+        password.sendKeys("Elvira1234.");
 
         WebElement date = driver.findElement(By.cssSelector("select[aria-label='Month']>option[value='4']"));
         date.click();
